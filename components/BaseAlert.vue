@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import CircleCheckIcon from "./icons/IconCircleCheck.vue";
-
 interface Props {
     text: string;
 }
@@ -11,7 +9,7 @@ defineProps<Props>();
 <template>
     <div class="alert">
         <div class="alert__text flex items-center">
-            <CircleCheckIcon />
+            <IconsCircle variant="circle-check" />
             <h6 class="heading-5">{{ text }}</h6>
         </div>
         <div class="alert__link"></div>
