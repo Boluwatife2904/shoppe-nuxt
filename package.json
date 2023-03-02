@@ -8,6 +8,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.2.3"
+    "nuxt": "^3.2.3",
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "@kyvg/vue3-notification": "^2.9.0",
+    "@pinia/nuxt": "^0.4.7"
   }
 }

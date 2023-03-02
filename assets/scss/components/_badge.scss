@@ -1,0 +1,10 @@
+.badge {
+    display: inline-block;
+    border-radius: .4rem;
+    padding: .2rem .8rem;
+
+    &--accent {
+        color: #fff;
+        background-color: var(--accent-color);
+    }
+}

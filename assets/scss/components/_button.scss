@@ -1,0 +1,63 @@
+.button {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+
+    &--medium {
+        padding: 1.6rem 4.9rem;
+    }
+
+    &--large {
+        padding: 1.6rem 2rem;
+        width: 100%;
+        max-width: 50rem;
+    }
+
+    &--large-medium {
+        padding: 1.6rem 5.2rem;
+        width: 100%;
+        max-width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: max-content;
+            max-width: max-content;
+        }
+    }
+
+    &--outline-black {
+        @include typeface(700, 1.6rem, 2.1rem);
+        border: 0.1rem solid var(--black-color);
+        background: transparent;
+        border-radius: 0.4rem;
+        color: var(--black-color);
+    }
+
+    &--outline-white {
+        @include typeface(700, 1.6rem, 2.1rem);
+        border: 0.1rem solid var(--white-color);
+        background: transparent;
+        border-radius: 0.4rem;
+        color: var(--white-color);
+    }
+
+    &--solid-black {
+        @include typeface(400, 1.6rem, 2.1rem);
+        border: 0.1rem solid transparent;
+        background: var(--black-color);
+        border-radius: 0.4rem;
+        color: var(--white-color);
+    }
+
+    &--solid-accent {
+        @include typeface(400, 1.6rem, 2.1rem);
+        border: 0.1rem solid transparent;
+        background: var(--accent-color);
+        border-radius: 0.4rem;
+        color: var(--white-color);
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+}
