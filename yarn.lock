@@ -1335,6 +1335,10 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.47.tgz#e597ef75086c6e896ff5478a6bfc0a7aa4bbd14c"
   integrity sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==
 
+"@vueform/slider@vueform/slider":
+  version "2.1.7"
+  resolved "https://codeload.github.com/vueform/slider/tar.gz/e65e39585ae39093af6c40de235a055135bfa375"
+
 "@vueuse/head@^1.1.9":
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-1.1.9.tgz#cbd5de37227f4bc403729bc047abf6fd4144c6e7"

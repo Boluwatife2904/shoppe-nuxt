@@ -40,6 +40,12 @@ defineProps<Props>();
         <path fill="none" d="M0 0h24v24H0z" />
         <path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" />
     </svg>
+
+
+    <svg v-else-if="variant === 'filter'" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
+    </svg>
 </template>
 
 <style scoped></style>
