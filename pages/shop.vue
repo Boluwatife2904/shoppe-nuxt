@@ -3,6 +3,7 @@ import useProductStore from "@/stores/ProductStore";
 import Slider from "@vueform/slider";
 
 const ProductStore = useProductStore();
+const { isOnMobile } = useDeviceType();
 
 interface Product {
 	image: string;
@@ -85,20 +86,6 @@ const sortByOptions = [
 const toggleFilterContainer = () => {
 	showFilterContainer.value = !showFilterContainer.value;
 };
-
-const checkScreenWidth = () => {
-	if (window.innerWidth >= 992) {
-		showFilterContainer.value = false;
-	}
-};
-
-onMounted(() => {
-	window.addEventListener("resize", checkScreenWidth);
-});
-
-onUnmounted(() => {
-	window.removeEventListener("resize", checkScreenWidth);
-});
 </script>
 
 <template>
@@ -112,7 +99,7 @@ onUnmounted(() => {
 
 		<div class="shop-page__wrapper">
 			<!-- FILTER -->
-			<div class="shop-page__filter flex flex-column text-center" :class="{ 'shop-page__filter--mobile': showFilterContainer }">
+			<div class="shop-page__filter flex flex-column text-center" :class="{ 'shop-page__filter--mobile': showFilterContainer && isOnMobile }">
 				<p class="heading-1 flex space-between title">
 					Filter Products
 					<button class="button" @click="toggleFilterContainer">
@@ -145,7 +132,7 @@ onUnmounted(() => {
 				</div>
 
 				<div class="shop-page__apply-filter">
-					<BaseButton size="large" variant="solid-accent" text="Apply Filters" @click.native="toggleFilterContainer" />
+					<BaseButton size="large" variant="solid-accent" text="Apply Filters" @click="toggleFilterContainer" />
 				</div>
 			</div>
 			<!-- PRODUCTS -->
