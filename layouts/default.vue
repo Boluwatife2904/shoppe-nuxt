@@ -4,9 +4,9 @@
 
 <template>
 	<main class="main-layout">
-		<!-- <TheHeader /> -->
+		<TheHeader />
 		<slot />
-		<!-- <TheFooter /> -->
+		<TheFooter />
 		<!-- <Notifications position="bottom right" classes="app-notification" width="320px" /> -->
 	</main>
 </template>
@@ -26,43 +26,43 @@
 	}
 }
 
-.vue-notification-group {
-	bottom: 2.4rem !important;
-	right: 2.4rem !important;
-}
+// .vue-notification-group {
+// 	bottom: 2.4rem !important;
+// 	right: 2.4rem !important;
+// }
 
-.app-notification {
-	margin: 0 0.5rem 0.5rem;
-	padding: 1.8rem 1.2rem;
-	color: #ffffff;
-	border-radius: 0.6rem;
+// .app-notification {
+// 	margin: 0 0.5rem 0.5rem;
+// 	padding: 1.8rem 1.2rem;
+// 	color: #ffffff;
+// 	border-radius: 0.6rem;
 
-	.notification-title {
-		font-size: 1.8rem;
-	}
+// 	.notification-title {
+// 		font-size: 1.8rem;
+// 	}
 
-	.notification-content {
-		font-size: 1.6rem;
-	}
+// 	.notification-content {
+// 		font-size: 1.6rem;
+// 	}
 
-	// default (blue)
-	background: #44a4fc;
-	border-left: 5px solid #187fe7;
+// 	// default (blue)
+// 	background: #44a4fc;
+// 	border-left: 5px solid #187fe7;
 
-	// types (green, amber, red)
-	&.success {
-		background: #68cd86;
-		border-left-color: #42a85f;
-	}
+// 	// types (green, amber, red)
+// 	&.success {
+// 		background: #68cd86;
+// 		border-left-color: #42a85f;
+// 	}
 
-	&.warn {
-		background: #ffb648;
-		border-left-color: #f48a06;
-	}
+// 	&.warn {
+// 		background: #ffb648;
+// 		border-left-color: #f48a06;
+// 	}
 
-	&.error {
-		background: #e54d42;
-		border-left-color: #b82e24;
-	}
-}
+// 	&.error {
+// 		background: #e54d42;
+// 		border-left-color: #b82e24;
+// 	}
+// }
 </style>
