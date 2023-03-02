@@ -15,6 +15,7 @@
     "@kyvg/vue3-notification": "^2.9.0",
     "@pinia/nuxt": "^0.4.7",
     "@splidejs/vue-splide": "^0.6.12",
-    "@vueform/slider": "vueform/slider"
+    "@vueform/slider": "vueform/slider",
+    "vue3-star-ratings": "^1.1.0"
   }
 }

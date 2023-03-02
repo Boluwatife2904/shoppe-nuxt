@@ -4797,6 +4797,11 @@ vue-router@^4.1.6:
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
+vue3-star-ratings@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/vue3-star-ratings/-/vue3-star-ratings-1.1.0.tgz#54d61fd2c37048defb6d0f2cc93db93946384145"
+  integrity sha512-dDGZAn64N9DvaJxCm0Zoy+2pauWioK4ayj7iAH89sVTxMbmrPkhlC9B527PL+t1wcPWH0wIZaFZZp5OMO5hRrA==
+
 vue@^3.2.47:
   version "3.2.47"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.47.tgz#3eb736cbc606fc87038dbba6a154707c8a34cff0"
