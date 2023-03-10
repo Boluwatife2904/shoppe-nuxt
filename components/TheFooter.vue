@@ -62,7 +62,7 @@ const subscribeToNewsletter = () => {
 			</ul>
 			<form class="footer__newsletter w-100 position-relative" @submit.prevent="subscribeToNewsletter">
 				<BaseInput v-model="emailAddress" :error="invalidEmailAddress" type="text" id="newsletter-id" placeholder="Give an email, get the newsletter" @focus="invalidEmailAddress = false" />
-				<base-button class="position-absolute footer__submit-button">
+				<base-button title="Subscribe" class="position-absolute footer__submit-button">
 					<IconsArrow variant="right" />
 				</base-button>
 			</form>

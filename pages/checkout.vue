@@ -32,7 +32,7 @@ const placeOrder = () => {
 		<h1 class="page__title heading-1 checkout-page__title">checkout</h1>
 		<div class="checkout-page__heading">
 			<p class="heading-5"><span class="dark-gray-text">Returning Customer?</span> <nuxt-link :to="{ name: 'auth' }" class="navigation__link navigation__link--dark">Click here to login</nuxt-link></p>
-			<p class="heading-5"><span class="dark-gray-text">Have a coupon?</span> <base-button @click="toggleShowApplyCouponContainer">Click here to enter your code</base-button></p>
+			<p class="heading-5"><span class="dark-gray-text">Have a coupon?</span> <base-button title="Enter Code" @click="toggleShowApplyCouponContainer">Click here to enter your code</base-button></p>
 
 			<div v-if="showApplyCouponContainer" class="checkout-page__coupon">
 				<p class="heading-5 dark-gray-text checkout-page__coupon-title">If you have a coupon code, please apply it below.</p>

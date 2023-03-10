@@ -42,17 +42,17 @@ const addProductToCart = () => {
 			<div class="product__image--overlay position-absolute flex items-center content-center">
 				<ul class="product__icons flex items-center flex-center">
 					<li class="product__icon">
-						<base-button @click="addProductToCart">
+						<base-button title="Add to Cart" @click="addProductToCart">
 							<IconsAction variant="cart" />
 						</base-button>
 					</li>
 					<li class="product__icon">
-						<base-button @click="viewProduct(product.slug)">
+						<base-button title="View Product" @click="viewProduct(product.slug)">
 							<IconsAction variant="view" />
 						</base-button>
 					</li>
 					<li class="product__icon">
-						<base-button>
+						<base-button title="Like Product">
 							<IconsAction variant="like" />
 						</base-button>
 					</li>

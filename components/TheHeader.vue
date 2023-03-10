@@ -47,22 +47,22 @@ watch(showCartSideMenu, () => {
 		</ul>
 		<ul class="navigation__icons flex items-center space-between w-100">
 			<li>
-				<base-button class="hide-on-mobile">
+				<base-button class="hide-on-mobile" title="Search">
 					<IconsAction variant="search" />
 				</base-button>
 			</li>
 			<li>
-				<base-button>
+				<base-button title="Cart">
 					<IconsAction variant="cart" @click="toggleCartSideMenu(true)" />
 				</base-button>
 			</li>
 			<li>
-				<base-button class="hide-on-mobile" @click="goToDashboard">
+				<base-button title="Go To Dashboard" class="hide-on-mobile" @click="goToDashboard">
 					<IconsUser />
 				</base-button>
 			</li>
 			<li class="hide-on-desktop">
-				<base-button>
+				<base-button title="Hamburger">
 					<IconsHamburger />
 				</base-button>
 			</li>
