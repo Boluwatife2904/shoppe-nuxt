@@ -9,9 +9,9 @@ const CartStore = useCartStore();
 		<h2 class="shopping-cart__title heading-1 page__title">Shopping Cart</h2>
 		<div v-if="CartStore.numberOfProductsInCart > 0" class="shopping-cart__wrapper">
 			<div class="shopping-cart__items">
-				<CartProductList v-if="CartStore.productsInCart && CartStore.productsInCart.length > 0">
+				<LazyCartProductList v-if="CartStore.productsInCart && CartStore.productsInCart.length > 0">
 					<CartProductItem v-for="product in CartStore.productsInCart" :product="product" :key="product.slug" />
-				</CartProductList>
+				</LazyCartProductList>
 				<CartApplyCoupon />
 			</div>
 			<div class="shopping-cart__totals cart-totals">

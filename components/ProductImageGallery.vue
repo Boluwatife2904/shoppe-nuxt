@@ -52,7 +52,7 @@ onMounted(() => {
         <div class="single-product__thumbnails">
             <Splide :options="thumbnailOptions" ref="thumbnails">
                 <SplideSlide v-for="i in 5" :key="i">
-                    <img class="single-product__thumbnail" :src="image" alt="Product Image" />
+                    <NuxtImg class="single-product__thumbnail" :src="image" alt="Product Image" format="webp" quality="100" />
                 </SplideSlide>
             </Splide>
         </div>
@@ -60,7 +60,7 @@ onMounted(() => {
         <div class="single-product__image">
             <Splide :options="mainOptions" ref="main">
                 <SplideSlide v-for="i in 5" :key="i">
-                    <img class="single-product__img" :src="image" alt="Product Image" />
+                    <NuxtImg class="single-product__img" :src="image" alt="Product Image" format="webp" quality="100" />
                 </SplideSlide>
             </Splide>
         </div>

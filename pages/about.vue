@@ -8,7 +8,7 @@
 		<div class="page-group">
 			<h4 class="page-group__title heading-2">Top trends</h4>
 			<div class="page-group__image">
-				<img src="@/assets/images/top-trends.png" alt="Top Trends Image" />
+				<NuxtImg src="/top-trends.png" alt="Top Trends Image" format="webp" quality="100" loading="lazy" />
 			</div>
 			<p class="page-group__text heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.</p>
 			<p class="page-group__text heading-5">● consectetur adipiscing elit. Aliquam placerat</p>
@@ -17,7 +17,7 @@
 		<div class="page-group">
 			<h4 class="page-group__title heading-2">Produced with care</h4>
 			<div class="page-group__image">
-				<img src="@/assets/images/produced-with-care.png" alt="Produced With Care Image" />
+				<NuxtIng src="/produced-with-care.png" alt="Produced With Care Image" format="webp" quality="100" />
 			</div>
 			<p class="page-group__text heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.</p>
 		</div>

@@ -18,7 +18,7 @@ watch(route, () => {
             <h5 class="navigation-cart__title heading-5">Shopping bag</h5>
             <p class="navigation-cart__count body-small">{{ CartStore.numberOfProductsInCart }} items</p>
             <div v-if="CartStore.productsInCart && CartStore.productsInCart.length > 0" class="navigation-cart__products">
-                <NavigationCartItem v-for="product in CartStore.productsInCart" :key="product.slug" :product="product"> </NavigationCartItem>
+                <LazyNavigationCartItem v-for="product in CartStore.productsInCart" :key="product.slug" :product="product"> </LazyNavigationCartItem>
             </div>
             <EmptyState v-else type="cart" heading="Cart is Empty!" message="You've added any product to your cart. When You add a product to your cart, they'll show up here." />
         </div>

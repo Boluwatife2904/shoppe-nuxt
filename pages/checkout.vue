@@ -36,7 +36,7 @@ const placeOrder = () => {
 
 			<div v-if="showApplyCouponContainer" class="checkout-page__coupon">
 				<p class="heading-5 dark-gray-text checkout-page__coupon-title">If you have a coupon code, please apply it below.</p>
-				<CartApplyCoupon />
+				<LazyCartApplyCoupon />
 			</div>
 		</div>
 		<div class="checkout-page__wrapper">

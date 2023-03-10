@@ -41,12 +41,12 @@ watchEffect(() => {
 	<div v-if="product" class="single-product">
 		<!-- PRODUCT IMAGE GALLERY AND INFORMATION -->
 		<div class="single-product__heading">
-			<ProductImageGallery :image="product.image" />
-			<ProductInformation :product="product" />
+			<LazyProductImageGallery :image="product.image" />
+			<LazyProductInformation :product="product" />
 		</div>
 
 		<!-- PRODUCT TAB CHANGER -->
-		<ProductChangeSelectedTab :selected-tab="selectedTab" @change-tab="changeActiveTab" />
+		<LazyProductChangeSelectedTab :selected-tab="selectedTab" @change-tab="changeActiveTab" />
 
 		<!-- PRODUCT DESCRIPTION SECTION -->
 		<div v-if="selectedTab === 'description'" class="single-product__description">
@@ -63,8 +63,8 @@ watchEffect(() => {
 
 		<!-- PRODUCT REVIEWS SECTION -->
 		<div v-if="selectedTab === 'reviews'" class="single-product__reviews grid">
-			<ProductReviewList />
-			<ProductReviewForm />
+			<LazyProductReviewList />
+			<LazyProductReviewForm />
 		</div>
 
 		<!-- SIMILAR ITEMS -->

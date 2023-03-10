@@ -21,7 +21,7 @@ const CartStore = useCartStore();
 <template>
     <div class="nav-product position-relative">
         <div class="nav-product__image">
-            <img :src="product.image" :alt="product.name" />
+            <NuxtImg :src="product.image" :alt="product.name" format="webp" quality="100" loading="lazy" />
         </div>
         <div class="nav-product__text flex flex-column">
             <h3 class="nav-product__name">{{ product.name }}</h3>

@@ -34,7 +34,7 @@ const addProductToCart = () => {
 <template>
 	<div class="product">
 		<div class="product__image position-relative">
-			<img :src="product.image" :alt="product.name" />
+			<NuxtImg :src="product.image" :alt="product.name" format="webp" quality="100" loading="lazy" />
 			<div class="product__badges position-absolute">
 				<base-badge v-if="product.discountValue > 0"> -{{ product.discountValue }}% </base-badge>
 				<base-badge v-if="product.stock === 0">Sold out</base-badge>

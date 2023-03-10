@@ -22,7 +22,7 @@ const CartStore = useCartStore();
 <template>
     <div class="cart-item position-relative">
         <div class="cart-item__image">
-            <img :src="product.image" :alt="product.name" />
+            <NuxtImg :src="product.image" :alt="product.name" format="webp" quality="100" loading="lazy" />
         </div>
         <div class="cart-item__details flex items-start space-between">
             <div class="cart-item__info">

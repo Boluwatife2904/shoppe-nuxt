@@ -5,7 +5,7 @@ const route = useRoute();
 <template>
 	<div class="order-confirmation">
 		<div v-if="!!route.query.newOrder" class="order-confirmation__alert">
-			<BaseAlert text="We've received your order" />
+			<LazyBaseAlert text="We've received your order" />
 		</div>
 		<div class="order-confirmation__content">
 			<div class="order-confirmation__details">

@@ -12,8 +12,8 @@ defineProps<Props>();
 <template>
     <div class="empty-state text-center">
         <div class="empty-state__icon">
-            <img v-if="type === 'shop'" src="@/assets/images/crying-face.png" alt="Crying Face Image" />
-            <img v-else-if="type === 'cart'" src="@/assets/images/empty-cart.png" alt="Empty Cart Image" />
+            <NuxtImg v-if="type === 'shop'" src="/crying-face.png" alt="Crying Face Image" loading="lazy" />
+            <NuxtImg v-else-if="type === 'cart'" src="/empty-cart.png" alt="Empty Cart Image" loading="lazy" />
         </div>
         <h5 class="empty-state__heading heading-3">{{ heading }}</h5>
         <p class="empty-state__message heading-5">{{ message }}</p>

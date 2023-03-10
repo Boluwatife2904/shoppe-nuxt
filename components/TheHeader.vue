@@ -70,7 +70,7 @@ watch(showCartSideMenu, () => {
 	</nav>
 	<teleport to="body">
 		<transition name="slideIn" mode="out-in" appear>
-			<NavigationCartList v-if="showCartSideMenu" @close-menu="toggleCartSideMenu(false)" />
+			<LazyNavigationCartList v-if="showCartSideMenu" @close-menu="toggleCartSideMenu(false)" />
 		</transition>
 	</teleport>
 </template>
