@@ -31,12 +31,12 @@ const CartStore = useCartStore();
                 <p class="cart-item__price accent-text heading-5">${{ product.price }},00</p>
             </div>
             <div class="cart-item__counter flex items-center">
-                <button class="button heading-5 dark-gray-text" name="Decrease Quantity" @click="CartStore.decreaseCartItemCount(product.slug)">-</button>
+                <button class="button heading-5 dark-gray-text" title="Decrease Quantity" @click="CartStore.decreaseCartItemCount(product.slug)">-</button>
                 <span class="heading-5 dark-gray-text">{{ product.count }}</span>
-                <button class="button heading-5 dark-gray-text" name="Increase Quantity" @click="CartStore.increaseCartItemCount(product.slug)">+</button>
+                <button class="button heading-5 dark-gray-text" title="Increase Quantity" @click="CartStore.increaseCartItemCount(product.slug)">+</button>
             </div>
         </div>
-        <button class="cart-item__remove button position-absolute heading-3" name="Remove Product" @click="CartStore.removeItemFromCart(product.slug)">&times;</button>
+        <button class="cart-item__remove button position-absolute heading-3" title="Remove Product" @click="CartStore.removeItemFromCart(product.slug)">&times;</button>
     </div>
 </template>
 

@@ -106,7 +106,8 @@ watch(showCartSideMenu, () => {
 	}
 
 	&__icons {
-		max-width: 5.4rem;
+        width: 100%;
+		max-width: 9rem;
 		gap: 1.6rem;
 
 		@media screen and (min-width: 768px) {

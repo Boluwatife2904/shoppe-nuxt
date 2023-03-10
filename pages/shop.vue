@@ -92,7 +92,7 @@ const toggleFilterContainer = () => {
 	<div class="shop-page page-layout-margin">
 		<div class="shop-page__heading flex items-start space-between">
 			<h1 class="heading-1 shop-page__title">Shop The Latest</h1>
-			<button class="shop-page__filter-button button" name="Filter" @click="toggleFilterContainer">
+			<button class="shop-page__filter-button button" title="Filter" @click="toggleFilterContainer">
 				<IconsAction variant="filter" />
 			</button>
 		</div>
@@ -102,7 +102,7 @@ const toggleFilterContainer = () => {
 			<div class="shop-page__filter flex flex-column text-center" :class="{ 'shop-page__filter--mobile': showFilterContainer && isOnMobile }">
 				<p class="heading-1 flex space-between title">
 					Filter Products
-					<button name="Filter" class="button" @click="toggleFilterContainer">
+					<button title="Filter" class="button" @click="toggleFilterContainer">
 						<IconsAction variant="close" />
 					</button>
 				</p>

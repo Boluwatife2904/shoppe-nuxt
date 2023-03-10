@@ -13,8 +13,8 @@ watch(route, () => {
 <template>
     <div class="navigation-cart flex flex-column">
         <div class="navigation-cart__body position-relation">
-            <button class="button navigation-cart__close navigation-cart__close--mobile position-absolute" name="Close Sidebar" @click="emit('close-menu')">&#10094;</button>
-            <button class="button navigation-cart__close navigation-cart__close--desktop position-absolute" name="Close Sidebar" @click="emit('close-menu')">&times;</button>
+            <button class="button navigation-cart__close navigation-cart__close--mobile position-absolute" title="Close Sidebar" @click="emit('close-menu')">&#10094;</button>
+            <button class="button navigation-cart__close navigation-cart__close--desktop position-absolute" title="Close Sidebar" @click="emit('close-menu')">&times;</button>
             <h5 class="navigation-cart__title heading-5">Shopping bag</h5>
             <p class="navigation-cart__count body-small">{{ CartStore.numberOfProductsInCart }} items</p>
             <div v-if="CartStore.productsInCart && CartStore.productsInCart.length > 0" class="navigation-cart__products">

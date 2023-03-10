@@ -2,6 +2,7 @@
 
 <template>
     <section class="home-slider flex items-center">
+        <NuxtImg src="/header.png" format="webp" />
         <div class="home-slider__content">
             <h3 class="home-slider__name heading-1 text-white">Gold big hoops</h3>
             <p class="home-slider__price heading-2 text-white">$ 68,00</p>
@@ -12,13 +13,21 @@
 
 <style lang="scss">
 .home-slider {
-    background-image: url("../assets/images/header.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 1.6rem;
     height: 35.6rem;
     transition: all 0.2s linear;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
 
     @media screen and (min-width: 768px) {
         height: 46.6rem;

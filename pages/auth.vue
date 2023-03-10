@@ -23,8 +23,8 @@ const authenticate = () => {
 		<h1 class="heading-1 text-center auth-page__title">My Account</h1>
 
 		<div class="auth-tab">
-			<button class="auth-tab__button heading-3" :class="{ 'auth-tab__button--active': currentAuthTab === 'sign-in' }" name="Switch to Sign In" @click="setCurrentAuthTab('sign-in')">Sign In</button>
-			<button class="auth-tab__button heading-3" :class="{ 'auth-tab__button--active': currentAuthTab === 'register' }" name="Switch to Register" @click="setCurrentAuthTab('register')">Register</button>
+			<button class="auth-tab__button heading-3" :class="{ 'auth-tab__button--active': currentAuthTab === 'sign-in' }" title="Switch to Sign In" @click="setCurrentAuthTab('sign-in')">Sign In</button>
+			<button class="auth-tab__button heading-3" :class="{ 'auth-tab__button--active': currentAuthTab === 'register' }" title="Switch to Register" @click="setCurrentAuthTab('register')">Register</button>
 		</div>
 
 		<form class="auth-form" @submit.prevent="authenticate">

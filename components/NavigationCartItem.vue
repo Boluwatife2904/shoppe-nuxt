@@ -29,12 +29,12 @@ const CartStore = useCartStore();
             <p class="nav-product__price accent-text">${{ product.price }},00</p>
             <div class="nav-product__quantity flex dark-gray-text">
                 <span>QTY:</span>
-                <button class="button dark-gray-text" name="Reduce Quantity" @click="CartStore.decreaseCartItemCount(product.slug)" :disabled="product.count === 1">-</button>
+                <button class="button dark-gray-text" title="Reduce Quantity" @click="CartStore.decreaseCartItemCount(product.slug)" :disabled="product.count === 1">-</button>
                 <span>{{ product.count }}</span>
-                <button class="button dark-gray-text" name="Increase Quantity" @click="CartStore.increaseCartItemCount(product.slug)">+</button>
+                <button class="button dark-gray-text" title="Increase Quantity" @click="CartStore.increaseCartItemCount(product.slug)">+</button>
             </div>
         </div>
-        <button class="nav-product__remove position-absolute button" name="Remove Product" @click="CartStore.removeItemFromCart(product.slug)">&times;</button>
+        <button class="nav-product__remove position-absolute button" title="Remove Product" @click="CartStore.removeItemFromCart(product.slug)">&times;</button>
     </div>
 </template>
 

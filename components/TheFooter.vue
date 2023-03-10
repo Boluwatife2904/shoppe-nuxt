@@ -57,7 +57,7 @@ const subscribeToNewsletter = () => {
 		<div class="footer__top flex items-center space-between">
 			<ul class="footer__navigation flex space-between w-100">
 				<li v-for="link in footerLinks" :key="link.name" class="navigation__item">
-					<nuxt-link :to="{ name: link.path }" class="navigation__link navigation__link--light heading-5 text-uppercase" :name="link.name"> {{ link.name }}</nuxt-link>
+					<nuxt-link :to="{ name: link.path }" class="navigation__link navigation__link--light heading-5 text-uppercase" :title="link.name"> {{ link.name }}</nuxt-link>
 				</li>
 			</ul>
 			<form class="footer__newsletter w-100 position-relative" @submit.prevent="subscribeToNewsletter">
