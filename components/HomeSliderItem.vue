@@ -2,7 +2,7 @@
 
 <template>
     <section class="home-slider flex items-center">
-        <NuxtImg src="/header.png" format="webp" />
+        <NuxtImg src="/header.png" format="webp" quality="100" loading="lazy" alt="Home Slider Image" />
         <div class="home-slider__content">
             <h3 class="home-slider__name heading-1 text-white">Gold big hoops</h3>
             <p class="home-slider__price heading-2 text-white">$ 68,00</p>

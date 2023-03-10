@@ -74,7 +74,7 @@ const subscribeToNewsletter = () => {
 			</p>
 			<ul class="footer__socials w-100 flex items-center space-between">
 				<li v-for="social in footerSocials" :key="social.type" class="navigation__item">
-					<a :href="social.url" target="_blank" rel="noopener noreferrer" class="navigation__link--light">
+					<a :href="social.url" target="_blank" rel="noopener noreferrer" class="navigation__link--light" :title="social.type">
 						<IconsSocial :variant="social.type" />
 					</a>
 				</li>

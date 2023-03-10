@@ -36,7 +36,7 @@ watch(showCartSideMenu, () => {
 <template>
 	<nav class="navigation flex items-center">
 		<div class="navigation__logo">
-			<nuxt-link :to="{ name: 'index' }" class="navigation__link--home" name="Shoppe">
+			<nuxt-link :to="{ name: 'index' }" class="navigation__link--home" title="Shoppe">
 				<IconsShoppeLogo />
 			</nuxt-link>
 		</div>
