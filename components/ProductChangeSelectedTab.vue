@@ -20,7 +20,7 @@ const changeTab = (tab: TabChoices) => {
 <template>
     <ul class="tab flex items-center">
         <li v-for="option in tabChoices" :key="option" class="tab__item">
-            <button class="tab__button text-capitalize button heading-3" :class="{ active: option === selectedTab }" @click="changeTab(option)">
+            <button class="tab__button text-capitalize button heading-3" :class="{ active: option === selectedTab }" :name="option" @click="changeTab(option)">
                 <template v-if="option === 'additional-information'">Additional Information</template>
                 <template v-else-if="option === 'reviews'">Reviews(2)</template>
                 <template v-else>{{ option }}</template>

@@ -6,6 +6,7 @@ interface Props {
     type?: string;
     labelSize?: string;
     labelColor?: string;
+    name?: string;
 }
 
 defineProps<Props>();
@@ -14,13 +15,13 @@ defineEmits(["update:modelValue"]);
 
 <template>
     <!-- SWITCH CHECKBOXES -->
-    <label v-if="type === 'switch'" class="switch">
-        <input id="checkbox" type="checkbox" :checked="modelValue" @change="$emit('update:modelValue', ($event.target as HTMLInputElement).checked)" />
+    <label v-if="type === 'switch'" :for="id" class="switch">
+        <input :id="id" type="checkbox" :checked="modelValue" :name="name" @change="$emit('update:modelValue', ($event.target as HTMLInputElement).checked)" />
         <span class="slider round"></span>
     </label>
     <!-- NORMAL CHECKBOXES -->
     <label v-else class="checkbox__label flex items-center" :for="id">
-        <input class="checkbox__input" type="checkbox" :name="id" :id="id" @change="$emit('update:modelValue', ($event.target as HTMLInputElement).checked)" :checked="modelValue" />
+        <input class="checkbox__input" type="checkbox" :name="name" :id="id" @change="$emit('update:modelValue', ($event.target as HTMLInputElement).checked)" :checked="modelValue" />
         <span v-if="!!label" :class="[labelSize === 'small' ? 'small-label' : 'heading-5', { 'dark-gray-text': labelColor === 'gray' }]">{{ label }}</span>
     </label>
 </template>

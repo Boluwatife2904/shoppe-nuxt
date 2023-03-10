@@ -92,7 +92,7 @@ const toggleFilterContainer = () => {
 	<div class="shop-page page-layout-margin">
 		<div class="shop-page__heading flex items-start space-between">
 			<h1 class="heading-1 shop-page__title">Shop The Latest</h1>
-			<button class="shop-page__filter-button button" @click="toggleFilterContainer">
+			<button class="shop-page__filter-button button" name="Filter" @click="toggleFilterContainer">
 				<IconsAction variant="filter" />
 			</button>
 		</div>
@@ -102,7 +102,7 @@ const toggleFilterContainer = () => {
 			<div class="shop-page__filter flex flex-column text-center" :class="{ 'shop-page__filter--mobile': showFilterContainer && isOnMobile }">
 				<p class="heading-1 flex space-between title">
 					Filter Products
-					<button class="button" @click="toggleFilterContainer">
+					<button name="Filter" class="button" @click="toggleFilterContainer">
 						<IconsAction variant="close" />
 					</button>
 				</p>
@@ -113,10 +113,10 @@ const toggleFilterContainer = () => {
 					</div>
 				</div>
 				<div class="shop-page__shop-by">
-					<BaseSelect name="shop-by" v-model="shopByOption" :options="shopByOptions" placeholder="Shop By" :has-border="true" size="large" />
+					<BaseSelect name="shop-by" id="shop-by" v-model="shopByOption" :options="shopByOptions" placeholder="Shop By" :has-border="true" size="large" />
 				</div>
 				<div class="shop-page__sort-by">
-					<BaseSelect name="shop-by" v-model="sortByOption" :options="sortByOptions" placeholder="Sort By" :has-border="true" size="large" />
+					<BaseSelect name="sort-by" id="sort-by" v-model="sortByOption" :options="sortByOptions" placeholder="Sort By" :has-border="true" size="large" />
 				</div>
 				<div class="shop-page__slider">
 					<Slider v-model="priceRange" :min="0" :max="100" :lazy="false" :tooltips="false" />
@@ -124,11 +124,11 @@ const toggleFilterContainer = () => {
 				</div>
 				<div class="shop-page__on-sale flex items-center space-between">
 					<span class="heading-5">On Sale</span>
-					<BaseCheckbox v-model="onSale" type="switch" id="on-sale" />
+					<BaseCheckbox v-model="onSale" type="switch" id="on-sale" name="On Sale" />
 				</div>
 				<div class="shop-page__in-stock flex items-center space-between">
 					<span class="heading-5">In Stock</span>
-					<BaseCheckbox v-model="inStock" type="switch" id="in-stock" />
+					<BaseCheckbox v-model="inStock" type="switch" id="in-stock" name="In Stock" />
 				</div>
 
 				<div class="shop-page__apply-filter">

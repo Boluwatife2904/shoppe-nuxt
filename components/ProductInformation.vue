@@ -47,15 +47,15 @@ const addProductToCart = () => {
 
 		<div class="single-product__quantity flex items-center">
 			<div class="single-product__counter flex items-center space-between">
-				<button class="button heading-5" @click="productCount--">-</button>
+				<button class="button heading-5" name="Reduce Quantity" @click="productCount--">-</button>
 				<span class="heading-5">{{ productCount }}</span>
-				<button class="button heading-5" @click="productCount++">+</button>
+				<button class="button heading-5" name="Increase Quantity" @click="productCount++">+</button>
 			</div>
 			<BaseButton variant="outline-black" size="large" text="ADD TO CART" @click="addProductToCart" />
 		</div>
 
 		<div class="single-product__icons flex items-center">
-			<button class="button single-product__wishlist navigation__link navigation__link--light">
+			<button class="button single-product__wishlist navigation__link navigation__link--light" name="Like">
 				<IconsAction variant="like" />
 			</button>
 			<ul class="single-product__socials flex items-center">

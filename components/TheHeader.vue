@@ -36,7 +36,7 @@ watch(showCartSideMenu, () => {
 <template>
 	<nav class="navigation flex items-center">
 		<div class="navigation__logo">
-			<nuxt-link :to="{ name: 'index' }" class="navigation__link--home">
+			<nuxt-link :to="{ name: 'index' }" class="navigation__link--home" name="Shoppe">
 				<IconsShoppeLogo />
 			</nuxt-link>
 		</div>
@@ -46,18 +46,26 @@ watch(showCartSideMenu, () => {
 			</li>
 		</ul>
 		<ul class="navigation__icons flex items-center space-between w-100">
-			<base-button class="hide-on-mobile">
-				<IconsAction variant="search" />
-			</base-button>
-			<base-button>
-				<IconsAction variant="cart" @click="toggleCartSideMenu(true)" />
-			</base-button>
-			<base-button class="hide-on-mobile" @click="goToDashboard">
-				<IconsUser />
-			</base-button>
-			<base-button class="hide-on-desktop">
-				<IconsHamburger />
-			</base-button>
+			<li>
+				<base-button class="hide-on-mobile">
+					<IconsAction variant="search" />
+				</base-button>
+			</li>
+			<li>
+				<base-button>
+					<IconsAction variant="cart" @click="toggleCartSideMenu(true)" />
+				</base-button>
+			</li>
+			<li>
+				<base-button class="hide-on-mobile" @click="goToDashboard">
+					<IconsUser />
+				</base-button>
+			</li>
+			<li class="hide-on-desktop">
+				<base-button>
+					<IconsHamburger />
+				</base-button>
+			</li>
 		</ul>
 	</nav>
 	<teleport to="body">
