@@ -1,6 +1,6 @@
 import { defineStore, acceptHMRUpdate } from "pinia";
 import useProductStore from "./ProductStore";
-// import { notify } from "@kyvg/vue3-notification";
+import { notify } from "@kyvg/vue3-notification";
 
 interface CartItem {
     slug: string;
@@ -32,20 +32,20 @@ const useCartStore = defineStore("CartStore", {
             } else {
                 this.cartItems.push({ slug, count });
             }
-            // notify({
-            //     type: "success",
-            //     text: "Product have been added to cart successfully 🎉!",
-            //     duration: 500,
-            // });
+            notify({
+                type: "success",
+                text: "Product have been added to cart successfully 🎉!",
+                duration: 500,
+            });
         },
 
         removeItemFromCart(slug: string) {
             this.cartItems = this.cartItems.filter((cartItem) => cartItem.slug !== slug);
-            // notify({
-            //     type: "success",
-            //     text: "Product have been removed from cart successfully 🎉!",
-            //     duration: 500,
-            // });
+            notify({
+                type: "success",
+                text: "Product have been removed from cart successfully 🎉!",
+                duration: 500,
+            });
         },
 
         increaseCartItemCount(slug: string) {
