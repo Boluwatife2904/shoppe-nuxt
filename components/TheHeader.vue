@@ -75,7 +75,7 @@ watch(showCartSideMenu, () => {
 	</teleport>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .navigation {
 	justify-content: space-between;
 	padding-bottom: 1.7rem;
@@ -136,7 +136,7 @@ watch(showCartSideMenu, () => {
 	transform: translate(0);
 }
 
-.nuxt-link-exact-active {
+.router-link-exact-active {
 	padding-bottom: 2.15rem;
 	border-bottom: 2px solid #000;
 }
