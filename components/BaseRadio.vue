@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { computed } from "@vue/reactivity";
-
 interface Props {
     name: string;
     id: string;

@@ -1,40 +1,15 @@
 <script lang="ts" setup>
-import RightArrowIcon from "@/components/icons/IconArrowRight.vue";
-
-import { ref, computed } from "vue";
-
 const footerLinks = ref([
-	{
-		name: "contact",
-		path: "contact",
-	},
-	{
-		name: "terms of services",
-		path: "terms-of-service",
-	},
-	{
-		name: "shipping and returns",
-		path: "shipping-and-returns",
-	},
+	{ name: "contact", path: "contact" },
+	{ name: "terms of services", path: "terms-of-service" },
+	{ name: "shipping and returns", path: "shipping-and-returns" },
 ]);
 
 const footerSocials = ref([
-	{
-		type: "linkedin",
-		url: "#",
-	},
-	{
-		type: "facebook",
-		url: "#",
-	},
-	{
-		type: "instagram",
-		url: "#",
-	},
-	{
-		type: "twitter",
-		url: "#",
-	},
+	{ type: "linkedin", url: "#" },
+	{ type: "facebook", url: "#" },
+	{ type: "instagram", url: "#" },
+	{ type: "twitter", url: "#" },
 ]);
 
 const currentYear = computed(() => new Date().getFullYear());

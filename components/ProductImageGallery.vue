@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Splide, SplideSlide, Options } from "@splidejs/vue-splide";
 import "@splidejs/vue-splide/css";
-import { onMounted, reactive, ref } from "vue";
 
 interface Props {
     image: string;

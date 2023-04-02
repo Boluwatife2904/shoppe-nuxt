@@ -1,0 +1,20 @@
+.vue3-star-ratings__wrapper {
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left !important;
+}
+
+.vue3-star-ratings {
+	display: block !important;
+}
+
+.vue3-star-ratings svg:not(:first-child) {
+	margin-left: 10px !important;
+}
+
+.stars path {
+	stroke: #000 !important;
+	stroke-width: 20px !important;
+	stroke-dasharray: 0, 0 !important;
+	stroke-linejoin: bevel !important;
+}

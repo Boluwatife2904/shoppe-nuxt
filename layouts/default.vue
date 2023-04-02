@@ -1,6 +1,4 @@
-<script setup lang="ts">
-// import Notifications from '@kyvg/vue3-notification'
-</script>
+<script setup lang="ts"></script>
 
 <template>
 	<main class="main-layout">
