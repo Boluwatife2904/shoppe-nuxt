@@ -5,9 +5,7 @@ interface Props {
 
 defineProps<Props>();
 
-const goBackHome = () => {
-	navigateTo({ name: "index" }, { replace: true });
-};
+const goBackHome = () => clearError({ redirect: "/" });
 </script>
 
 <template>
