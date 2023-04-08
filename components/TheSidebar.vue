@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const links = [
 	{ name: "dashboard", title: "Home" },
-	{ name: "orders", title: "Orders" },
-	{ name: "downloads", title: "Downloads" },
-	{ name: "addresses", title: "Addresses" },
-	{ name: "account", title: "Account" },
+	{ name: "dashboard-orders", title: "Orders" },
+	{ name: "dashboard-downloads", title: "Downloads" },
+	{ name: "dashboard-addresses", title: "Addresses" },
+	{ name: "dashboard-account", title: "Account" },
 ];
 </script>
 
@@ -15,7 +15,7 @@ const links = [
 		</div>
 		<ul class="sidebar__links flex flex-column">
 			<li v-for="link in links" :key="link.name">
-				<NuxtLink :to="{ name: 'index' }" class="flex items-center" :class="{ active: $route.name === link.name }">
+				<NuxtLink :to="{ name: link.name }" class="flex items-center" :class="{ active: $route.name === link.name }">
 					<IconsNavigation :variant="link.name"></IconsNavigation>
 					{{ link.title }}
 				</NuxtLink>

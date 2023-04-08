@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-	<div>Downloads</div>
+	<div>Addresses</div>
 </template>
 
 <style lang="scss" scoped></style>
