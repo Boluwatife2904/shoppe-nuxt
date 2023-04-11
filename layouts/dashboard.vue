@@ -6,7 +6,12 @@
 			<TheSidebar />
 		</aside>
 		<main class="dashboard__content">
-			<slot></slot>
+			<div class="dashboard__header">
+				<DashboardHeader />
+			</div>
+			<div class="dashboard__main">
+				<slot></slot>
+			</div>
 		</main>
 	</div>
 </template>
@@ -31,6 +36,14 @@
 		background-color: #f9f9f9;
 		height: 100vh;
 		overflow-y: scroll;
+	}
+
+	&__main {
+		padding: 0rem 2rem;
+
+		@media screen and (min-width: 600px) {
+			padding: 0rem 3.2rem;
+		}
 	}
 }
 </style>
