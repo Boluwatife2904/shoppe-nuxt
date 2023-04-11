@@ -22,4 +22,15 @@ export default defineNuxtConfig({
 	},
 	css: ["@/assets/scss/index.scss", "@/assets/fonts.scss"],
 	modules: ["@pinia/nuxt", "@nuxt/image-edge"],
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					additionalData: `
+						@import "@/assets/scss/abstract/_mixins.scss";
+					`,
+				},
+			},
+		},
+	},
 });
