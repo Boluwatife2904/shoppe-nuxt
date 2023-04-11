@@ -14,9 +14,17 @@
 <style lang="scss" scoped>
 .dashboard {
 	display: grid;
-	grid-template-columns: 30rem auto;
+
+	@media screen and (min-width: 600px) {
+		grid-template-columns: 30rem auto;
+	}
 
 	&__sidebar {
+		display: none;
+
+		@media screen and (min-width: 600px) {
+			display: block;
+		}
 	}
 
 	&__content {
