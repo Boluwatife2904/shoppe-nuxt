@@ -8,15 +8,15 @@ defineProps<Props>();
 
 <template>
 	<div class="page-header">
-		<h4 class="page-header__title heading-3 weight-600">{{ title }}</h4>
+		<h4 class="page-header__title">{{ title }}</h4>
 	</div>
 </template>
 
 <style lang="scss" scoped>
 .page-header {
 	&__title {
-		font-weight: 600;
-        margin-bottom: 3rem;
+		@include typeface(600, 2.4rem, 2.8rem);
+		margin-bottom: 3rem;
 	}
 }
 </style>

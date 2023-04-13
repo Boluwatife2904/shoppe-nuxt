@@ -36,6 +36,7 @@
 		background-color: #f9f9f9;
 		height: 100vh;
 		overflow-y: scroll;
+        padding-bottom: 10rem;
 	}
 
 	&__main {

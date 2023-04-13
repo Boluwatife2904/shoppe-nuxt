@@ -1,62 +1,66 @@
 .input {
-    &__field {
-        @include typeface(400, 1.6rem, 2.7rem);
+	&--margin-large {
+		margin-bottom: 3.7rem;
+	}
 
-        background-color: transparent;
-        border: none;
-        color: var(--black-color);
-        border-bottom: 0.1rem solid var(--gray);
-        outline: none;
-        padding-bottom: 1.3rem;
-        width: 100%;
+	&__field {
+		@include typeface(400, 1.6rem, 2.7rem);
 
-        &::placeholder {
-            color: var(--dark-gray);
-        }
+		background-color: transparent;
+		border: none;
+		color: var(--black-color);
+		border-bottom: 0.1rem solid var(--gray);
+		outline: none;
+		padding-bottom: 1.3rem;
+		width: 100%;
 
-        &--large-font {
-            font-size: 1.6rem !important;
-        }
-    }
+		&::placeholder {
+			color: var(--dark-gray);
+		}
 
-    &__error {
-        @include typeface(400, 1.4rem, 2rem);
-        left: 0;
-        bottom: -3rem;
-    }
+		&--large-font {
+			font-size: 1.6rem !important;
+		}
+	}
+
+	&__error {
+		@include typeface(400, 1.4rem, 2rem);
+		left: 0;
+		bottom: -3rem;
+	}
 }
 
 .select {
-    &__field {
-        @include typeface(400, 1.6rem, 2.7rem);
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        color: var(--black-color);
-        border-bottom: 0.1rem solid var(--gray);
-        outline: none;
-        padding-bottom: 1.3rem;
-        width: 100%;
-        font-size: 1.2rem;
-        color: var(--dark-gray);
+	&__field {
+		@include typeface(400, 1.6rem, 2.7rem);
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		color: var(--black-color);
+		border-bottom: 0.1rem solid var(--gray);
+		outline: none;
+		padding-bottom: 1.3rem;
+		width: 100%;
+		font-size: 1.2rem;
+		color: var(--dark-gray);
 
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background: transparent;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position-x: 97%;
-        background-position-y: 2px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background: transparent;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position-x: 97%;
+		background-position-y: 2px;
 
-        &--large-font {
-            font-size: 1.6rem !important;
-        }
+		&--large-font {
+			font-size: 1.6rem !important;
+		}
 
-        &--bordered {
-            border: 1px solid var(--dark-gray);
-            border-radius: 0.4rem;
-            padding: 1.6rem;
-            background-position-y: 18px;
-        }
-    }
+		&--bordered {
+			border: 1px solid var(--dark-gray);
+			border-radius: 0.4rem;
+			padding: 1.6rem;
+			background-position-y: 18px;
+		}
+	}
 }
