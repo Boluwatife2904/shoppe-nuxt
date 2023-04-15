@@ -11,10 +11,10 @@ definePageMeta({
 			<p class="addresses__message">The following addresses will be used on the checkout page by default.</p>
 			<div class="addresses__content">
 				<div class="addresses__content--left">
-					<DashboardAddressForm title="Billing address" />
+					<DashboardAddressForm address-type="billing" />
 				</div>
 				<div class="addresses__content--right">
-					<DashboardAddressForm title="Shipping address" />
+					<DashboardAddressForm address-type="shipping" />
 				</div>
 			</div>
 		</div>
