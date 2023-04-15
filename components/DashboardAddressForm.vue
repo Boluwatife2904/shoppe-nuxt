@@ -31,7 +31,7 @@ const updateUserAddress = () => {};
 				<BaseInput type="text" id="lastName" v-model="address.lastName" placeholder="Last Name *" margin-bottom="large" />
 			</div>
 			<BaseInput type="text" id="companyName" v-model="address.companyName" placeholder="Company Name" margin-bottom="large" />
-			<BaseSelect :options="countries" name="country" v-model:model-value="address.country" placeholder="Country *" />
+			<BaseSelect size="large" color="grey" margin-bottom="large" :options="countries" name="country" v-model:model-value="address.country" placeholder="Country *" />
 			<BaseInput type="text" id="streetAddress" v-model="address.streetAddress" placeholder="Street Address *" margin-bottom="large" />
 			<BaseInput type="text" id="postcodeOrZip" v-model="address.postcodeOrZip" placeholder="Postcode / ZIP *" margin-bottom="large" />
 			<BaseInput type="text" id="townOrCity" v-model="address.townOrCity" placeholder="Town / City *" margin-bottom="large" />
