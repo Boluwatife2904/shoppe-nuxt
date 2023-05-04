@@ -20,7 +20,7 @@ const viewOrder = (orderNumber: string) => {};
 		<div class="orders__content">
 			<template v-if="orders && orders.length > 0">
 				<div class="hide-on-mobile">
-					<DesktopTable :headers="headers">
+					<LazyDesktopTable :headers="headers">
 						<template #body>
 							<DesktopTableItem v-for="order in orders" :key="order.orderNumber">
 								<span>{{ order.orderNumber }}</span>
@@ -30,18 +30,18 @@ const viewOrder = (orderNumber: string) => {};
 								<span><button class="button body-large accent-text" @click="viewOrder(order.orderNumber)">View Order</button></span>
 							</DesktopTableItem>
 						</template>
-					</DesktopTable>
+					</LazyDesktopTable>
 				</div>
 				<div class="hide-on-desktop">
-					<MobileTable v-for="order in orders" :key="order.orderNumber">
-						<MobileTableItem title="order number">{{ order.orderNumber }}</MobileTableItem>
-						<MobileTableItem title="date">{{ order.date }}</MobileTableItem>
-						<MobileTableItem title="status">{{ order.status }}</MobileTableItem>
-						<MobileTableItem title="total">{{ order.total }}</MobileTableItem>
-						<MobileTableItem title="actions">
+					<LazyMobileTable v-for="order in orders" :key="order.orderNumber">
+						<LazyMobileTableItem title="order number">{{ order.orderNumber }}</LazyMobileTableItem>
+						<LazyMobileTableItem title="date">{{ order.date }}</LazyMobileTableItem>
+						<LazyMobileTableItem title="status">{{ order.status }}</LazyMobileTableItem>
+						<LazyMobileTableItem title="total">{{ order.total }}</LazyMobileTableItem>
+						<LazyMobileTableItem title="actions">
 							<span><button class="button body-medium accent-text" @click="viewOrder(order.orderNumber)">View Order</button></span>
-						</MobileTableItem>
-					</MobileTable>
+						</LazyMobileTableItem>
+					</LazyMobileTable>
 				</div>
 			</template>
 

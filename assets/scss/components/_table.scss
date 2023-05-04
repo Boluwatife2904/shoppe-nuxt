@@ -33,6 +33,9 @@
 }
 
 .table__item {
-	border-bottom: 1px solid var(--gray);
 	padding-bottom: 2.4rem;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid var(--gray);
+	}
 }
