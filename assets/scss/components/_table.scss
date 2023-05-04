@@ -14,22 +14,22 @@
 		}
 
 		&:nth-child(3) {
-			width: 18%;
+			width: 15%;
 		}
 
 		&:nth-child(4) {
-			width: 18%;
+			width: 15%;
 		}
 
 		&:nth-child(5) {
-			width: 18%;
+			width: 24%;
 		}
 	}
 }
 
 .table__header {
-    border-bottom: 1px solid var(--black-color);
-    padding-bottom: 1.6rem;
+	border-bottom: 1px solid var(--black-color);
+	padding-bottom: 1.6rem;
 }
 
 .table__item {
