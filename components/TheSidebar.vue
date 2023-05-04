@@ -42,8 +42,12 @@ const links = [
 }
 
 .sidebar {
-	padding: 3.2rem;
+	padding: 3.2rem 2rem;
 	height: 100vh;
+
+	@media screen and (min-width: 600px) {
+		padding: 3.2rem;
+	}
 
 	&__logo {
 		margin-bottom: 6rem;

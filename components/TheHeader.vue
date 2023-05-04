@@ -1,25 +1,12 @@
 <script setup lang="ts">
-import SearchIcon from "@/components/icons/IconSearch.vue";
-
-const router = useRouter();
-
 const navigationLinks = ref([
-	{
-		name: "Shop",
-		path: "shop",
-	},
-	{
-		name: "Blog",
-		path: "blog",
-	},
-	{
-		name: "Our Story",
-		path: "about",
-	},
+	{ name: "Shop", path: "shop" },
+	{ name: "Blog", path: "blog" },
+	{ name: "Our Story", path: "about" },
 ]);
 
 const goToDashboard = () => {
-	router.push({ name: "auth" });
+	navigateTo({ name: "about" });
 };
 
 const showCartSideMenu = ref(false);
@@ -36,35 +23,35 @@ watch(showCartSideMenu, () => {
 <template>
 	<nav class="navigation flex items-center">
 		<div class="navigation__logo">
-			<nuxt-link :to="{ name: 'index' }" class="navigation__link--home" title="Shoppe">
+			<NuxtLink :to="{ name: 'index' }" class="navigation__link--home" title="Shoppe">
 				<IconsShoppeLogo />
-			</nuxt-link>
+			</NuxtLink>
 		</div>
 		<ul class="navigation__links position-relative w-100 items-center space-between">
 			<li v-for="link in navigationLinks" :key="link.path" class="navigation__item navigation__item--navbar">
-				<nuxt-link :to="{ name: link.path }" class="navigation__link navigation__link--dark heading-5 text-capitalize">{{ link.name }}</nuxt-link>
+				<NuxtLink :to="{ name: link.path }" class="navigation__link navigation__link--dark heading-5 text-capitalize">{{ link.name }}</NuxtLink>
 			</li>
 		</ul>
 		<ul class="navigation__icons flex items-center space-between w-100">
 			<li>
-				<base-button class="hide-on-mobile" title="Search">
+				<BaseButton class="hide-on-mobile" title="Search">
 					<IconsAction variant="search" />
-				</base-button>
+				</BaseButton>
 			</li>
 			<li>
-				<base-button title="Cart">
+				<BaseButton title="Cart">
 					<IconsAction variant="cart" @click="toggleCartSideMenu(true)" />
-				</base-button>
+				</BaseButton>
 			</li>
 			<li>
-				<base-button title="Go To Dashboard" class="hide-on-mobile" @click="goToDashboard">
+				<BaseButton title="Go To Dashboard" class="hide-on-mobile" @click="goToDashboard">
 					<IconsUser />
-				</base-button>
+				</BaseButton>
 			</li>
 			<li class="hide-on-desktop">
-				<base-button title="Hamburger">
+				<BaseButton title="Hamburger">
 					<IconsHamburger />
-				</base-button>
+				</BaseButton>
 			</li>
 		</ul>
 	</nav>
@@ -106,7 +93,7 @@ watch(showCartSideMenu, () => {
 	}
 
 	&__icons {
-        width: 100%;
+		width: 100%;
 		max-width: 9rem;
 		gap: 1.6rem;
 
