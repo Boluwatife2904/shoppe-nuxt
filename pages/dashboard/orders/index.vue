@@ -18,18 +18,21 @@ const viewOrder = (orderNumber: string) => {};
 	<div class="orders">
 		<DashboardPageHeader title="Orders" />
 		<div class="orders__content">
-			<DesktopTable :headers="headers">
-				<template #body>
-					<DesktopTableItem v-for="order in orders" :key="order.orderNumber">
-						<span>{{ order.orderNumber }}</span>
-						<span>{{ order.date }}</span>
-						<span>{{ order.status }}</span>
-						<span>{{ order.total }}</span>
-						<span><button class="button body-large accent-text" @click="viewOrder(order.orderNumber)">View Order</button></span>
-					</DesktopTableItem>
-				</template>
-			</DesktopTable>
-			<BaseAlert :show-icon="false" text="No orders have been made yet" link-text="BROWSE PRODUCTS" link-address="/shop" />
+			<template v-if="orders && orders.length > 0">
+				<DesktopTable :headers="headers">
+					<template #body>
+						<DesktopTableItem v-for="order in orders" :key="order.orderNumber">
+							<span>{{ order.orderNumber }}</span>
+							<span>{{ order.date }}</span>
+							<span>{{ order.status }}</span>
+							<span>{{ order.total }}</span>
+							<span><button class="button body-large accent-text" @click="viewOrder(order.orderNumber)">View Order</button></span>
+						</DesktopTableItem>
+					</template>
+				</DesktopTable>
+			</template>
+
+			<LazyBaseAlert v-else :show-icon="false" text="No orders have been made yet" link-text="BROWSE PRODUCTS" link-address="/shop" />
 		</div>
 	</div>
 </template>
