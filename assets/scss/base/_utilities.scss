@@ -1,135 +1,123 @@
 // TEXT UTULITIES
 .text-capitalize {
-    text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .text-uppercase {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-left {
-    text-align: left;
-}
-
-.text-justify {
-    text-align: justify;
+$text-alignments: center, right, left, justify;
+@each $alignment in $text-alignments {
+	.text-#{$alignment} {
+		text-align: $alignment;
+	}
 }
 
 .error-text {
-    color: var(--error-color);
+	color: var(--error-color);
 }
 
 .accent-text {
-    color: var(--accent-color);
+	color: var(--accent-color);
 }
 
 .dark-gray-text {
-    color: var(--dark-gray);
+	color: var(--dark-gray);
 }
 
 .text-white {
-    color: var(--white-color);
+	color: var(--white-color);
+}
+
+.text-black {
+	color: var(--black-color);
 }
 
 // POSITION UTILITIES
-.position-relative {
-    position: relative;
-}
-
-.position-absolute {
-    position: absolute;
+$positions: relative, absolute;
+@each $position in $positions {
+	.position-#{$position} {
+		position: $position;
+	}
 }
 
 // FLEX UTILITIES
 .flex-wrap {
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 .flex-column {
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .space-between {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .items-center {
-    align-items: center;
+	align-items: center;
 }
 
 .items-start {
-    align-items: flex-start;
+	align-items: flex-start;
 }
 
 .content-center {
-    justify-content: center;
+	justify-content: center;
 }
 
 // WIDTH PROPERTIES
 .w-100 {
-    width: 100%;
+	width: 100%;
 }
 
 // DISPLAY PROPERTIES
-.block {
-    display: block;
+$displays: block, inline-block, grid, flex, inline-flex;
+@each $display in $displays {
+	.#{$display} {
+		display: $display;
+	}
 }
 
-.inline-block {
-    display: inline-block;
-}
-
-.grid {
-    display: grid;
-}
-
-.flex {
-    display: flex;
-}
-
-.inline-flex {
-    display: inline-flex;
+$font-weights: 400, 500, 600, 700;
+@each $font-weight in $font-weights {
+	.weight-#{$font-weight} {
+		font-weight: $font-weight;
+	}
 }
 
 .hide-on-desktop {
-    display: block;
+	display: block;
 
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
 }
 
 .hide-on-mobile {
-    display: none;
+	display: none;
 
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
+	@media screen and (min-width: 768px) {
+		display: block;
+	}
 }
 
 // PAGE UTILITIES
 .page-layout-margin {
-    margin-top: 7.1rem;
-    margin-left: auto;
-    margin-right: auto;
+	margin-top: 7.1rem;
+	margin-left: auto;
+	margin-right: auto;
 
-    @media screen and (min-width: 768px) {
-        margin-top: 9.6rem;
-    }
+	@media screen and (min-width: 768px) {
+		margin-top: 9.6rem;
+	}
 }
 
 .page__title {
-    text-transform: capitalize;
+	text-transform: capitalize;
 
-    @media screen and (min-width: 768px) {
-        text-align: center;
-    }
+	@media screen and (min-width: 768px) {
+		text-align: center;
+	}
 }

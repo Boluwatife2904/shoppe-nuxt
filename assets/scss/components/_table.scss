@@ -1,0 +1,38 @@
+.table__item,
+.table__header {
+	width: 100%;
+	gap: 1rem;
+	margin-bottom: 2.4rem;
+
+	> span {
+		&:nth-child(1) {
+			width: 28%;
+		}
+
+		&:nth-child(2) {
+			width: 18%;
+		}
+
+		&:nth-child(3) {
+			width: 18%;
+		}
+
+		&:nth-child(4) {
+			width: 18%;
+		}
+
+		&:nth-child(5) {
+			width: 18%;
+		}
+	}
+}
+
+.table__header {
+    border-bottom: 1px solid var(--black-color);
+    padding-bottom: 1.6rem;
+}
+
+.table__item {
+	border-bottom: 1px solid var(--gray);
+	padding-bottom: 2.4rem;
+}

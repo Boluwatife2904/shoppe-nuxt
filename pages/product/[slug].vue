@@ -55,10 +55,10 @@ watchEffect(() => {
 
 		<!-- PRODUCT ADDTIONAL INFORMATION SECTION -->
 		<div v-if="selectedTab === 'additional-information'" class="single-product__additional-information">
-			<p class="heading-5 flex"><span class="font-bold">Weight:</span> <span class="dark-gray-text">0.3kg</span></p>
-			<p class="heading-5 flex"><span class="font-bold">Dimensions:</span> <span class="dark-gray-text">15 x 10 x 1 cm</span></p>
-			<p class="heading-5 flex"><span class="font-bold">Colours:</span> <span class="dark-gray-text">Black, Brown, White</span></p>
-			<p class="heading-5 flex"><span class="font-bold">Materials:</span> <span class="dark-gray-text">Metal</span></p>
+			<p class="heading-5 flex"><span class="weight-700">Weight:</span> <span class="dark-gray-text">0.3kg</span></p>
+			<p class="heading-5 flex"><span class="weight-700">Dimensions:</span> <span class="dark-gray-text">15 x 10 x 1 cm</span></p>
+			<p class="heading-5 flex"><span class="weight-700">Colours:</span> <span class="dark-gray-text">Black, Brown, White</span></p>
+			<p class="heading-5 flex"><span class="weight-700">Materials:</span> <span class="dark-gray-text">Metal</span></p>
 		</div>
 
 		<!-- PRODUCT REVIEWS SECTION -->

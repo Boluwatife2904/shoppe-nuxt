@@ -33,7 +33,7 @@
 	}
 
 	&__content {
-		background-color: #f9f9f9;
+		background-color: #fdfdfd;
 		height: 100vh;
 		overflow-y: scroll;
         padding-bottom: 10rem;
