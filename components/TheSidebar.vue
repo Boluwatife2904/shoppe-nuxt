@@ -1,4 +1,10 @@
 <script setup lang="ts">
+interface Emits {
+	(event: "toggle-sidebar"): void;
+}
+
+defineEmits<Emits>();
+
 const links = [
 	{ name: "dashboard", title: "Home" },
 	{ name: "dashboard-orders", title: "Orders" },
@@ -14,7 +20,7 @@ const links = [
 			<IconsShoppeLogo />
 		</div>
 		<ul class="sidebar__links flex flex-column">
-			<li v-for="link in links" :key="link.name">
+			<li v-for="link in links" :key="link.name" @click="$emit('toggle-sidebar')">
 				<NuxtLink :to="{ name: link.name }" class="flex items-center" :class="{ active: $route.name === link.name }">
 					<IconsNavigation :variant="link.name"></IconsNavigation>
 					{{ link.title }}

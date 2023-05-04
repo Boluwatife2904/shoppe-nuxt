@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const isOpen = ref(false);
+const route = useRoute();
 
 const toggleSidebar = () => {
 	isOpen.value = !isOpen.value;
@@ -16,6 +17,10 @@ onMounted(() => {
 
 onUnmounted(() => {
 	window.addEventListener("resize", hideSideBarOnMobile);
+});
+
+watch(route, () => {
+    if(isOpen.value) isOpen.value = false;
 });
 </script>
 
@@ -58,8 +63,8 @@ onUnmounted(() => {
 
 		&--active {
 			left: 0;
-            width: 100%;
-            min-width: 26rem;
+			width: 100%;
+			min-width: 26rem;
 			max-width: 60%;
 		}
 	}
